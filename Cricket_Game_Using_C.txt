@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include<time.h>
+int main()
+{
+    srand(time(0));
+    int n,s=0;
+    printf("~~~~~CRICKET GAME~~~~~\n");
+    printf("your winning score:");
+    int r=(rand()%25)+1;
+    printf("%d",r);
+    while(s<r){
+    printf("\nenter a number between 1 to 6:\n");
+    scanf("%d",&n);
+    s=s+n;
+    printf("system:");
+    int d=(rand()%6)+1;
+    printf("%d",d);
+    if(d==n){
+        printf("\n**you out**");
+        printf("\nyour score:%d",s);
+        if(s==r)
+    {
+        printf("\n---Booth player have equal score---\n");
+        printf("**None have won**\n");
+        printf("~~Game Over~~\n");
+        break;
+    }
+     if(s<r)
+    {
+        printf("\n~~you loose~~\n");
+        printf("\n~~Game Over~~");
+        break;
+    }
+    }
+    if(s>r)
+    {
+        printf("\n~~~~you won~~~~\n");
+
+        printf("\n~~Game Over~~\n");
+        break;
+    }
+    }
+    return 0;
+}
